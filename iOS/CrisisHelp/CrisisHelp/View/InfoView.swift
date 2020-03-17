@@ -10,7 +10,6 @@ import SwiftUI
 
 struct InfoView: View {
     @ObservedObject var model = InfoViewModel()
-    @State private var isActive = false
     
     var body: some View {
         NavigationView {
@@ -46,18 +45,11 @@ struct InfoView: View {
                         }
                     }
                     .navigationBarTitle("Keep yourself safe!")
-                    .navigationBarItems(trailing: VStack {
-                        NavigationLink(
-                            destination: HackathonView(),
-                            isActive: $isActive
-                        ) {
-                            Button(action: {
-                                self.isActive = true
-                            }) {
-                                Image(systemName: "heart.fill")
-                            }
+                    .navigationBarItems(trailing:
+                        NavigationLink(destination: HackathonView()) {
+                            Image(systemName: "heart.fill")
                         }
-                    })
+                    )
                 }
             }
         }
