@@ -28,6 +28,8 @@
 		C5301FCF2420DF2200E16C0C /* InfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5301FCE2420DF2200E16C0C /* InfoViewModel.swift */; };
 		C55B020C24210B68004081F5 /* DeviceServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55B020B24210B68004081F5 /* DeviceServices.swift */; };
 		C55B020E24210C3B004081F5 /* DataServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55B020D24210C3B004081F5 /* DataServices.swift */; };
+		C55B0216242117F6004081F5 /* HackathonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55B0215242117F6004081F5 /* HackathonView.swift */; };
+		C55B021824211918004081F5 /* HackathonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55B021724211918004081F5 /* HackathonViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +72,8 @@
 		C5301FCE2420DF2200E16C0C /* InfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewModel.swift; sourceTree = "<group>"; };
 		C55B020B24210B68004081F5 /* DeviceServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceServices.swift; sourceTree = "<group>"; };
 		C55B020D24210C3B004081F5 /* DataServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataServices.swift; sourceTree = "<group>"; };
+		C55B0215242117F6004081F5 /* HackathonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HackathonView.swift; sourceTree = "<group>"; };
+		C55B021724211918004081F5 /* HackathonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HackathonViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,6 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				C5301FCE2420DF2200E16C0C /* InfoViewModel.swift */,
+				C55B021724211918004081F5 /* HackathonViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -190,6 +195,7 @@
 				C5301FC32420CE9700E16C0C /* HelpRequestedView.swift */,
 				C5301FC52420CEA700E16C0C /* MapView.swift */,
 				C5301FC72420CEB000E16C0C /* InfoView.swift */,
+				C55B0215242117F6004081F5 /* HackathonView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -356,6 +362,7 @@
 			files = (
 				C5301FCF2420DF2200E16C0C /* InfoViewModel.swift in Sources */,
 				C5301FC82420CEB000E16C0C /* InfoView.swift in Sources */,
+				C55B0216242117F6004081F5 /* HackathonView.swift in Sources */,
 				C5301FC62420CEA700E16C0C /* MapView.swift in Sources */,
 				C5301FCD2420D18000E16C0C /* HelpRequest.swift in Sources */,
 				C5301FC42420CE9700E16C0C /* HelpRequestedView.swift in Sources */,
@@ -364,6 +371,7 @@
 				C5301F732420BE7E00E16C0C /* SceneDelegate.swift in Sources */,
 				C55B020C24210B68004081F5 /* DeviceServices.swift in Sources */,
 				C5301FC22420CE8B00E16C0C /* HelpView.swift in Sources */,
+				C55B021824211918004081F5 /* HackathonViewModel.swift in Sources */,
 				C5301F752420BE7E00E16C0C /* MainView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
