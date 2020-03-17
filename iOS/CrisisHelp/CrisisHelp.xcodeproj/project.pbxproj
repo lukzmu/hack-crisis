@@ -26,6 +26,7 @@
 		C5301FC42420CE9700E16C0C /* HelpRequestedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5301FC32420CE9700E16C0C /* HelpRequestedView.swift */; };
 		C5301FC62420CEA700E16C0C /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5301FC52420CEA700E16C0C /* MapView.swift */; };
 		C5301FC82420CEB000E16C0C /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5301FC72420CEB000E16C0C /* InfoView.swift */; };
+		C5301FCD2420D18000E16C0C /* HelpRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5301FCC2420D18000E16C0C /* HelpRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		C5301FC32420CE9700E16C0C /* HelpRequestedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpRequestedView.swift; sourceTree = "<group>"; };
 		C5301FC52420CEA700E16C0C /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		C5301FC72420CEB000E16C0C /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
+		C5301FCC2420D18000E16C0C /* HelpRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +169,7 @@
 		C5301FAE2420C8D800E16C0C /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				C5301FCC2420D18000E16C0C /* HelpRequest.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -361,6 +364,7 @@
 			files = (
 				C5301FC82420CEB000E16C0C /* InfoView.swift in Sources */,
 				C5301FC62420CEA700E16C0C /* MapView.swift in Sources */,
+				C5301FCD2420D18000E16C0C /* HelpRequest.swift in Sources */,
 				C5301FC42420CE9700E16C0C /* HelpRequestedView.swift in Sources */,
 				C5301FB42420C9E800E16C0C /* StringExtensions.swift in Sources */,
 				C5301F712420BE7E00E16C0C /* AppDelegate.swift in Sources */,
