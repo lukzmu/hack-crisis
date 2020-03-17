@@ -17,7 +17,7 @@ struct MainView: View {
                 .tabItem {
                     VStack {
                         Image(systemName: "exclamationmark.bubble")
-                        Text("Help".localized)
+                        Text("Help")
                     }
                 }
                 .tag(0)
@@ -25,7 +25,7 @@ struct MainView: View {
                 .tabItem {
                     VStack {
                         Image(systemName: "map")
-                        Text("Map".localized)
+                        Text("Map")
                     }
                 }
                 .tag(1)
@@ -33,7 +33,7 @@ struct MainView: View {
                 .tabItem {
                     VStack {
                         Image(systemName: "info")
-                        Text("Information".localized)
+                        Text("Information")
                     }
                 }
                 .tag(2)

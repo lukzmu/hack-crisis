@@ -15,10 +15,6 @@ enum ResourceAmount : String {
     case bad = "Bad"
     case normal = "Normal"
     
-    var localized : String {
-        return self.rawValue.localized
-    }
-    
     var color : Color {
         switch self {
         case .critical: return Color.red
