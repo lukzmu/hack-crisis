@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C51DAEAF242251F100436653 /* HelpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51DAEAE242251F100436653 /* HelpViewModel.swift */; };
+		C51DAEB124227C8400436653 /* LocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51DAEB024227C8400436653 /* LocationViewModel.swift */; };
 		C5301F712420BE7E00E16C0C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5301F702420BE7E00E16C0C /* AppDelegate.swift */; };
 		C5301F732420BE7E00E16C0C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5301F722420BE7E00E16C0C /* SceneDelegate.swift */; };
 		C5301F752420BE7E00E16C0C /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5301F742420BE7E00E16C0C /* MainView.swift */; };
@@ -16,8 +18,6 @@
 		C5301F882420BE7F00E16C0C /* CrisisHelpTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5301F872420BE7F00E16C0C /* CrisisHelpTests.swift */; };
 		C5301F932420BE7F00E16C0C /* CrisisHelpUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5301F922420BE7F00E16C0C /* CrisisHelpUITests.swift */; };
 		C5301FA22420BFC100E16C0C /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = C5301FA12420BFC100E16C0C /* Alamofire */; };
-		C5301FA52420BFFE00E16C0C /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = C5301FA42420BFFE00E16C0C /* RxSwift */; };
-		C5301FA72420BFFE00E16C0C /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = C5301FA62420BFFE00E16C0C /* RxCocoa */; };
 		C5301FAA2420C03500E16C0C /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = C5301FA92420C03500E16C0C /* SwiftyJSON */; };
 		C5301FAD2420C06000E16C0C /* ObjectMapper in Frameworks */ = {isa = PBXBuildFile; productRef = C5301FAC2420C06000E16C0C /* ObjectMapper */; };
 		C5301FC22420CE8B00E16C0C /* HelpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5301FC12420CE8B00E16C0C /* HelpView.swift */; };
@@ -50,6 +50,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C51DAEAE242251F100436653 /* HelpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpViewModel.swift; sourceTree = "<group>"; };
+		C51DAEB024227C8400436653 /* LocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewModel.swift; sourceTree = "<group>"; };
 		C5301F6D2420BE7E00E16C0C /* CrisisHelp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrisisHelp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5301F702420BE7E00E16C0C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C5301F722420BE7E00E16C0C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -81,9 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C5301FA72420BFFE00E16C0C /* RxCocoa in Frameworks */,
 				C5301FAD2420C06000E16C0C /* ObjectMapper in Frameworks */,
-				C5301FA52420BFFE00E16C0C /* RxSwift in Frameworks */,
 				C5301FAA2420C03500E16C0C /* SwiftyJSON in Frameworks */,
 				C5301FA22420BFC100E16C0C /* Alamofire in Frameworks */,
 			);
@@ -183,6 +183,8 @@
 			children = (
 				C5301FCE2420DF2200E16C0C /* InfoViewModel.swift */,
 				C55B021724211918004081F5 /* HackathonViewModel.swift */,
+				C51DAEAE242251F100436653 /* HelpViewModel.swift */,
+				C51DAEB024227C8400436653 /* LocationViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -234,8 +236,6 @@
 			name = CrisisHelp;
 			packageProductDependencies = (
 				C5301FA12420BFC100E16C0C /* Alamofire */,
-				C5301FA42420BFFE00E16C0C /* RxSwift */,
-				C5301FA62420BFFE00E16C0C /* RxCocoa */,
 				C5301FA92420C03500E16C0C /* SwiftyJSON */,
 				C5301FAC2420C06000E16C0C /* ObjectMapper */,
 			);
@@ -313,7 +313,6 @@
 			mainGroup = C5301F642420BE7E00E16C0C;
 			packageReferences = (
 				C5301FA02420BFC100E16C0C /* XCRemoteSwiftPackageReference "Alamofire" */,
-				C5301FA32420BFFE00E16C0C /* XCRemoteSwiftPackageReference "RxSwift" */,
 				C5301FA82420C03500E16C0C /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
 				C5301FAB2420C06000E16C0C /* XCRemoteSwiftPackageReference "ObjectMapper" */,
 			);
@@ -363,6 +362,7 @@
 				C5301FCF2420DF2200E16C0C /* InfoViewModel.swift in Sources */,
 				C5301FC82420CEB000E16C0C /* InfoView.swift in Sources */,
 				C55B0216242117F6004081F5 /* HackathonView.swift in Sources */,
+				C51DAEAF242251F100436653 /* HelpViewModel.swift in Sources */,
 				C5301FC62420CEA700E16C0C /* MapView.swift in Sources */,
 				C5301FCD2420D18000E16C0C /* HelpRequest.swift in Sources */,
 				C5301FC42420CE9700E16C0C /* HelpRequestedView.swift in Sources */,
@@ -370,6 +370,7 @@
 				C5301F712420BE7E00E16C0C /* AppDelegate.swift in Sources */,
 				C5301F732420BE7E00E16C0C /* SceneDelegate.swift in Sources */,
 				C55B020C24210B68004081F5 /* DeviceServices.swift in Sources */,
+				C51DAEB124227C8400436653 /* LocationViewModel.swift in Sources */,
 				C5301FC22420CE8B00E16C0C /* HelpView.swift in Sources */,
 				C55B021824211918004081F5 /* HackathonViewModel.swift in Sources */,
 				C5301F752420BE7E00E16C0C /* MainView.swift in Sources */,
@@ -709,14 +710,6 @@
 				minimumVersion = 5.0.4;
 			};
 		};
-		C5301FA32420BFFE00E16C0C /* XCRemoteSwiftPackageReference "RxSwift" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.1.0;
-			};
-		};
 		C5301FA82420C03500E16C0C /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON.git";
@@ -740,16 +733,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = C5301FA02420BFC100E16C0C /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
-		};
-		C5301FA42420BFFE00E16C0C /* RxSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = C5301FA32420BFFE00E16C0C /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = RxSwift;
-		};
-		C5301FA62420BFFE00E16C0C /* RxCocoa */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = C5301FA32420BFFE00E16C0C /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = RxCocoa;
 		};
 		C5301FA92420C03500E16C0C /* SwiftyJSON */ = {
 			isa = XCSwiftPackageProductDependency;

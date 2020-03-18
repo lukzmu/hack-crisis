@@ -22,6 +22,10 @@ enum ResourceAmount : String {
         case .normal: return Color.green
         }
     }
+    
+    static let allValues = [
+        normal, bad, critical
+    ]
 }
 
 class HelpRequest : Mappable {

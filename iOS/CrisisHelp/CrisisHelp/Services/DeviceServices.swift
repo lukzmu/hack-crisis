@@ -15,4 +15,8 @@ struct DeviceServices {
             UIApplication.shared.open(url)
         }
     }
+    
+    static func getDeviceId() -> String {
+        return UIDevice.current.identifierForVendor!.uuidString
+    }
 }

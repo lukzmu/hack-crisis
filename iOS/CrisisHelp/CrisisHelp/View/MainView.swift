@@ -20,7 +20,7 @@ struct MainView: View {
                         Text("Help")
                     }
                 }
-                .tag(0)
+                .tag(1)
             MapView()
                 .tabItem {
                     VStack {
@@ -28,7 +28,7 @@ struct MainView: View {
                         Text("Map")
                     }
                 }
-                .tag(1)
+                .tag(2)
             InfoView()
                 .tabItem {
                     VStack {
@@ -36,7 +36,7 @@ struct MainView: View {
                         Text("Information")
                     }
                 }
-                .tag(2)
+                .tag(0)
         }
     }
 }

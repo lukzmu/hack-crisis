@@ -9,8 +9,81 @@
 import SwiftUI
 
 struct HelpView: View {
+    @ObservedObject private var model = HelpViewModel()
+    @ObservedObject var locationViewModel = LocationViewModel()
+    
     var body: some View {
-        Text("Help")
+        NavigationView {
+            Form {
+                Section(header: Text("Supplies")) {
+                    Picker(selection: $model.waterSelection, label: Text("Water"), content: {
+                        ForEach(0..<model.resourceAmounts.count, id: \.self) {
+                            Text(self.model.resourceAmounts[$0])
+                        }
+                    })
+                    Picker(selection: $model.foodSelection, label: Text("Food"), content: {
+                        ForEach(0..<model.resourceAmounts.count, id: \.self) {
+                            Text(self.model.resourceAmounts[$0])
+                        }
+                    })
+                    Picker(selection: $model.medsSelection, label: Text("Meds"), content: {
+                        ForEach(0..<model.resourceAmounts.count, id: \.self) {
+                            Text(self.model.resourceAmounts[$0])
+                        }
+                    })
+                }
+                Section(header: Text("Coronavirus")) {
+                    Toggle(isOn: $model.isConv) {
+                        Text("Are you infected?")
+                    }
+                }
+                Section(header: Text("Additional details")) {
+                    Stepper(value: self.$model.numberOfPeople, in: 1...20, label: {
+                        Text("People at home: \(self.model.numberOfPeople)")
+                    })
+                    TextField("Optional description of your problem", text: $model.description)
+                }
+                Section(header: Text("Are you sure you want to request help? You can check the Information page to read about ways you can help yourself.")) {
+                    Button(action: {
+                        self.model.showRequestSheet = true
+                    }) {
+                        Text("SEND HELP REQUEST").foregroundColor(Color.red)
+                    }
+                    .actionSheet(isPresented: $model.showRequestSheet) {
+                        ActionSheet(
+                            title: Text("Send help request"),
+                            message: Text("Are you sure you want to send a help request?"),
+                            buttons: [
+                                .destructive(Text("Yes")) {
+                                    self.model.sendHelpRequest(
+                                        latitude: self.locationViewModel.userLatitude,
+                                        longitude: self.locationViewModel.userLongitude
+                                    )
+                                },
+                                .default(Text("No"))
+                            ]
+                        )
+                    }
+                }
+            }
+            .navigationBarTitle("Request help")
+            .alert(isPresented: $model.showRequestFailure) {
+                Alert(
+                    title: Text("Problem"),
+                    message: Text("We had a problem with sending your request. Try again."),
+                    dismissButton: .default(Text("Ok"))
+                )
+            }
+        }
+        .alert(isPresented: $model.showRequestSuccess) {
+            Alert(
+                title: Text("Sent!"),
+                message: Text("Your help request was successful."),
+                dismissButton: .default(Text("Ok"))
+            )
+        }
+        
+            
     }
 }
 
