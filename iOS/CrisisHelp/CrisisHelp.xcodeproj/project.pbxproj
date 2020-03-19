@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C502DF16242355E300078A60 /* HelpMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C502DF15242355E300078A60 /* HelpMapView.swift */; };
+		C502DF1824235DAE00078A60 /* HelpMapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C502DF1724235DAE00078A60 /* HelpMapViewModel.swift */; };
+		C502DF2024236CBF00078A60 /* DoubleExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C502DF1F24236CBF00078A60 /* DoubleExtensions.swift */; };
 		C51DAEAF242251F100436653 /* HelpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51DAEAE242251F100436653 /* HelpViewModel.swift */; };
 		C51DAEB124227C8400436653 /* LocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51DAEB024227C8400436653 /* LocationViewModel.swift */; };
 		C5301F712420BE7E00E16C0C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5301F702420BE7E00E16C0C /* AppDelegate.swift */; };
@@ -50,6 +53,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C502DF15242355E300078A60 /* HelpMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpMapView.swift; sourceTree = "<group>"; };
+		C502DF1724235DAE00078A60 /* HelpMapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpMapViewModel.swift; sourceTree = "<group>"; };
+		C502DF1F24236CBF00078A60 /* DoubleExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleExtensions.swift; sourceTree = "<group>"; };
+		C502DF2124237C0500078A60 /* Location.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Location.gpx; sourceTree = "<group>"; };
 		C51DAEAE242251F100436653 /* HelpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpViewModel.swift; sourceTree = "<group>"; };
 		C51DAEB024227C8400436653 /* LocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewModel.swift; sourceTree = "<group>"; };
 		C5301F6D2420BE7E00E16C0C /* CrisisHelp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrisisHelp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -139,6 +146,7 @@
 				C5301F722420BE7E00E16C0C /* SceneDelegate.swift */,
 				C5301F7B2420BE7F00E16C0C /* LaunchScreen.storyboard */,
 				C5301F7E2420BE7F00E16C0C /* Info.plist */,
+				C502DF2124237C0500078A60 /* Location.gpx */,
 				C5301F782420BE7F00E16C0C /* Preview Content */,
 			);
 			path = CrisisHelp;
@@ -185,6 +193,7 @@
 				C55B021724211918004081F5 /* HackathonViewModel.swift */,
 				C51DAEAE242251F100436653 /* HelpViewModel.swift */,
 				C51DAEB024227C8400436653 /* LocationViewModel.swift */,
+				C502DF1724235DAE00078A60 /* HelpMapViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -198,6 +207,7 @@
 				C5301FC52420CEA700E16C0C /* MapView.swift */,
 				C5301FC72420CEB000E16C0C /* InfoView.swift */,
 				C55B0215242117F6004081F5 /* HackathonView.swift */,
+				C502DF15242355E300078A60 /* HelpMapView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -205,6 +215,7 @@
 		C5301FB12420C90700E16C0C /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				C502DF1F24236CBF00078A60 /* DoubleExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -360,6 +371,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C5301FCF2420DF2200E16C0C /* InfoViewModel.swift in Sources */,
+				C502DF1824235DAE00078A60 /* HelpMapViewModel.swift in Sources */,
+				C502DF2024236CBF00078A60 /* DoubleExtensions.swift in Sources */,
 				C5301FC82420CEB000E16C0C /* InfoView.swift in Sources */,
 				C55B0216242117F6004081F5 /* HackathonView.swift in Sources */,
 				C51DAEAF242251F100436653 /* HelpViewModel.swift in Sources */,
@@ -373,6 +386,7 @@
 				C51DAEB124227C8400436653 /* LocationViewModel.swift in Sources */,
 				C5301FC22420CE8B00E16C0C /* HelpView.swift in Sources */,
 				C55B021824211918004081F5 /* HackathonViewModel.swift in Sources */,
+				C502DF16242355E300078A60 /* HelpMapView.swift in Sources */,
 				C5301F752420BE7E00E16C0C /* MainView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

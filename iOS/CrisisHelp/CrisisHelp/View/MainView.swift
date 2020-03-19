@@ -21,7 +21,7 @@ struct MainView: View {
                     }
                 }
                 .tag(1)
-            MapView()
+            HelpMapView()
                 .tabItem {
                     VStack {
                         Image(systemName: "map")

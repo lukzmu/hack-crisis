@@ -7,10 +7,22 @@
 //
 
 import SwiftUI
+import MapKit
 
-struct MapView: View {
-    var body: some View {
-        Text("Map")
+struct MapView: UIViewRepresentable {
+    @ObservedObject var model = LocationViewModel()
+    
+    func makeUIView(context: Context) -> MKMapView {
+        let map = MKMapView(frame: UIScreen.main.bounds)
+        map.mapType = .mutedStandard
+        map.showsUserLocation = true
+        map.userTrackingMode = .follow
+        
+        return map
+    }
+    
+    func updateUIView(_ view: MKMapView, context: Context){
+       
     }
 }
 
