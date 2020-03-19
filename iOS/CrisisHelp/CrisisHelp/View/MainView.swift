@@ -13,14 +13,14 @@ struct MainView: View {
  
     var body: some View {
         TabView(selection: $selection){
-            HelpView()
-                .tabItem {
-                    VStack {
-                        Image(systemName: "exclamationmark.bubble")
-                        Text("Help")
-                    }
+            InfoView()
+            .tabItem {
+                VStack {
+                    Image(systemName: "info")
+                    Text("Information")
                 }
-                .tag(1)
+            }
+            .tag(0)
             HelpMapView()
                 .tabItem {
                     VStack {
@@ -28,15 +28,15 @@ struct MainView: View {
                         Text("Map")
                     }
                 }
-                .tag(2)
-            InfoView()
-                .tabItem {
-                    VStack {
-                        Image(systemName: "info")
-                        Text("Information")
-                    }
+                .tag(1)
+            HelpView()
+            .tabItem {
+                VStack {
+                    Image(systemName: "exclamationmark.bubble")
+                    Text("Help")
                 }
-                .tag(0)
+            }
+            .tag(2)
         }
     }
 }

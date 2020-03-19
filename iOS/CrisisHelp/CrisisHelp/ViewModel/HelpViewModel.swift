@@ -39,8 +39,8 @@ class HelpViewModel : ObservableObject {
             food: ResourceAmount(rawValue: resourceAmounts[foodSelection])!,
             meds: ResourceAmount(rawValue: resourceAmounts[medsSelection])!,
             isConv: isConv,
-            latitude: Float(latitude),
-            longitude: Float(longitude),
+            latitude: latitude,
+            longitude: longitude,
             numberOfPeople: numberOfPeople,
             description: description
         )

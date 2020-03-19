@@ -23,6 +23,14 @@ enum ResourceAmount : String {
         }
     }
     
+    var textIcon : String {
+        switch self {
+        case .critical: return "🔴"
+        case .bad: return "🟠"
+        case .normal: return "🟢"
+        }
+    }
+    
     static let allValues = [
         normal, bad, critical
     ]
@@ -34,8 +42,8 @@ class HelpRequest : Mappable {
     var food : ResourceAmount!
     var meds : ResourceAmount!
     var isConv : Bool!
-    var latitude : Float!
-    var longitude : Float!
+    var latitude : Double!
+    var longitude : Double!
     var numberOfPeople : Int!
     var description : String?
     
@@ -45,8 +53,8 @@ class HelpRequest : Mappable {
         food : ResourceAmount,
         meds : ResourceAmount,
         isConv : Bool,
-        latitude : Float,
-        longitude : Float,
+        latitude : Double,
+        longitude : Double,
         numberOfPeople : Int,
         description : String
     ) {

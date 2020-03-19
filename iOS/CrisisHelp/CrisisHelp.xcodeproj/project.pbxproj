@@ -10,6 +10,8 @@
 		C502DF16242355E300078A60 /* HelpMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C502DF15242355E300078A60 /* HelpMapView.swift */; };
 		C502DF1824235DAE00078A60 /* HelpMapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C502DF1724235DAE00078A60 /* HelpMapViewModel.swift */; };
 		C502DF2024236CBF00078A60 /* DoubleExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C502DF1F24236CBF00078A60 /* DoubleExtensions.swift */; };
+		C502DF23242382EB00078A60 /* MapAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C502DF22242382EB00078A60 /* MapAnnotation.swift */; };
+		C502DF252423A21500078A60 /* BoolExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C502DF242423A21500078A60 /* BoolExtensions.swift */; };
 		C51DAEAF242251F100436653 /* HelpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51DAEAE242251F100436653 /* HelpViewModel.swift */; };
 		C51DAEB124227C8400436653 /* LocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51DAEB024227C8400436653 /* LocationViewModel.swift */; };
 		C5301F712420BE7E00E16C0C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5301F702420BE7E00E16C0C /* AppDelegate.swift */; };
@@ -57,6 +59,8 @@
 		C502DF1724235DAE00078A60 /* HelpMapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpMapViewModel.swift; sourceTree = "<group>"; };
 		C502DF1F24236CBF00078A60 /* DoubleExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleExtensions.swift; sourceTree = "<group>"; };
 		C502DF2124237C0500078A60 /* Location.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Location.gpx; sourceTree = "<group>"; };
+		C502DF22242382EB00078A60 /* MapAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapAnnotation.swift; sourceTree = "<group>"; };
+		C502DF242423A21500078A60 /* BoolExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoolExtensions.swift; sourceTree = "<group>"; };
 		C51DAEAE242251F100436653 /* HelpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpViewModel.swift; sourceTree = "<group>"; };
 		C51DAEB024227C8400436653 /* LocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewModel.swift; sourceTree = "<group>"; };
 		C5301F6D2420BE7E00E16C0C /* CrisisHelp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrisisHelp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -208,6 +212,7 @@
 				C5301FC72420CEB000E16C0C /* InfoView.swift */,
 				C55B0215242117F6004081F5 /* HackathonView.swift */,
 				C502DF15242355E300078A60 /* HelpMapView.swift */,
+				C502DF22242382EB00078A60 /* MapAnnotation.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -216,6 +221,7 @@
 			isa = PBXGroup;
 			children = (
 				C502DF1F24236CBF00078A60 /* DoubleExtensions.swift */,
+				C502DF242423A21500078A60 /* BoolExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -377,6 +383,7 @@
 				C55B0216242117F6004081F5 /* HackathonView.swift in Sources */,
 				C51DAEAF242251F100436653 /* HelpViewModel.swift in Sources */,
 				C5301FC62420CEA700E16C0C /* MapView.swift in Sources */,
+				C502DF252423A21500078A60 /* BoolExtensions.swift in Sources */,
 				C5301FCD2420D18000E16C0C /* HelpRequest.swift in Sources */,
 				C5301FC42420CE9700E16C0C /* HelpRequestedView.swift in Sources */,
 				C55B020E24210C3B004081F5 /* DataServices.swift in Sources */,
@@ -387,6 +394,7 @@
 				C5301FC22420CE8B00E16C0C /* HelpView.swift in Sources */,
 				C55B021824211918004081F5 /* HackathonViewModel.swift in Sources */,
 				C502DF16242355E300078A60 /* HelpMapView.swift in Sources */,
+				C502DF23242382EB00078A60 /* MapAnnotation.swift in Sources */,
 				C5301F752420BE7E00E16C0C /* MainView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
