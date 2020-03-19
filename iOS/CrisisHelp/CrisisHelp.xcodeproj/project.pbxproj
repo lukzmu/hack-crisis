@@ -206,12 +206,12 @@
 			isa = PBXGroup;
 			children = (
 				C5301F742420BE7E00E16C0C /* MainView.swift */,
-				C5301FC12420CE8B00E16C0C /* HelpView.swift */,
-				C5301FC32420CE9700E16C0C /* HelpRequestedView.swift */,
-				C5301FC52420CEA700E16C0C /* MapView.swift */,
 				C5301FC72420CEB000E16C0C /* InfoView.swift */,
 				C55B0215242117F6004081F5 /* HackathonView.swift */,
+				C5301FC12420CE8B00E16C0C /* HelpView.swift */,
+				C5301FC32420CE9700E16C0C /* HelpRequestedView.swift */,
 				C502DF15242355E300078A60 /* HelpMapView.swift */,
+				C5301FC52420CEA700E16C0C /* MapView.swift */,
 				C502DF22242382EB00078A60 /* MapAnnotation.swift */,
 			);
 			path = View;

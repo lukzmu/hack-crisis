@@ -54,7 +54,7 @@ struct MapView: UIViewRepresentable {
             if annotationView == nil {
                 annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: identifier)
                 annotationView?.canShowCallout = false
-                annotationView?.image = UIImage(named: typedAnnotation.iconAsset)
+                annotationView?.image = typedAnnotation.iconAsset
             } else {
                 annotationView?.annotation = annotation
             }

@@ -20,14 +20,33 @@ class MapAnnotation : NSObject, MKAnnotation {
     var subtitle: String? {
         return helpRequest.description ?? ""
     }
-    var iconAsset: String {
-        if helpRequest.water == .critical || helpRequest.food == .critical || helpRequest.meds == .critical {
-            return "criticalPin"
+    var iconAsset: UIImage {
+        let isWater = helpRequest.water != ResourceAmount.normal
+        let isFood = helpRequest.food != ResourceAmount.normal
+        let isMeds = helpRequest.meds != ResourceAmount.normal
+        
+        if isWater && isFood && isMeds {
+            return UIImage(named: "pinAll")!
         }
-        if helpRequest.water == .bad || helpRequest.food == .bad || helpRequest.meds == .bad {
-            return "badPin"
+        if isWater && isFood {
+            return UIImage(named: "pinWaterFood")!
         }
-        return "badPin"
+        if isWater && isMeds {
+            return UIImage(named: "pinWaterMeds")!
+        }
+        if isFood && isMeds {
+            return UIImage(named: "pinFoodMeds")!
+        }
+        if isWater {
+            return UIImage(named: "pinWater")!
+        }
+        if isFood {
+            return UIImage(named: "pinFood")!
+        }
+        if isMeds {
+            return UIImage(named: "pinMeds")!
+        }
+        return UIImage(named: "pinAll")!
     }
     
     init(
