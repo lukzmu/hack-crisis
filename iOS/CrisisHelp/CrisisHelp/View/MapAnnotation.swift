@@ -14,9 +14,7 @@ class MapAnnotation : NSObject, MKAnnotation {
     var coordinate : CLLocationCoordinate2D
     var helpRequest : HelpRequest
     
-    var title: String? {
-        return "💧: \(helpRequest.water!.textIcon) | 🍔: \(helpRequest.food!.textIcon) | 💊: \(helpRequest.meds!.textIcon)"
-    }
+    var title: String?
     var subtitle: String? {
         return helpRequest.description ?? ""
     }
