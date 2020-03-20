@@ -9,6 +9,7 @@
 import Foundation
 import SwiftUI
 import SwiftyJSON
+import Alamofire
 
 struct DataServices {
     static func getInformationLinks() -> Dictionary<String, String> {
@@ -28,14 +29,33 @@ struct DataServices {
         }
     }
     
-    static func getUserHelpRequest() -> HelpRequest? {
-        // Todo: Actual API call
-        return nil
+    static func getUserHelpRequest(completion: @escaping (HelpRequest?) -> Void) {
+        let deviceId = DeviceServices.getDeviceId()
+        let parameters : Parameters = ["deviceId": deviceId]
+        AF.request(
+            ConnectionStrings.getUserRequestString,
+            parameters: parameters
+        ).responseString { response in
+            if let status = response.response?.statusCode {
+                if status == 200 {
+                    if let json = response.value {
+                        print(json)
+                        completion(HelpRequest(JSONString: json))
+                    }
+                }
+            }
+        }
+        completion(nil)
     }
     
     static func getHelpRequests(inRadius: Double) -> [HelpRequest] {
         // Todo: Actual API call
         return []
+    }
+    
+    static func createHelpRequest(helpRequest: HelpRequest) -> [HelpRequest]? {
+        // Todo: Actual API call
+        return nil
     }
     
     static func deleteHelpRequest() -> HelpRequest? {
