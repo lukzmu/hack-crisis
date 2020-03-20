@@ -10,7 +10,7 @@ def lambda_handler(event, context):
     deviceId = event['queryStringParameters']['deviceId']
     response = table.get_item(
         Key={
-            'deviceId': str(2),
+            'deviceId': str(deviceId),
         }
     )
     if 'Item' in response:
