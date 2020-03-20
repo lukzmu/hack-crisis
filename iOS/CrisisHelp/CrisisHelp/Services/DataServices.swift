@@ -28,31 +28,18 @@ struct DataServices {
         }
     }
     
+    static func getUserHelpRequest() -> HelpRequest? {
+        // Todo: Actual API call
+        return nil
+    }
+    
     static func getHelpRequests(inRadius: Double) -> [HelpRequest] {
         // Todo: Actual API call
-        return [
-            HelpRequest(
-                deviceId: "abc123",
-                water: .bad,
-                food: .normal,
-                meds: .critical,
-                isConv: false,
-                latitude: 53.773088,
-                longitude: 20.478222,
-                numberOfPeople: 3,
-                description: "Ryszarda Knosały 9"
-            ),
-            HelpRequest(
-                deviceId: "abc123",
-                water: .normal,
-                food: .normal,
-                meds: .bad,
-                isConv: false,
-                latitude: 53.855388,
-                longitude: 20.958299,
-                numberOfPeople: 3,
-                description: "Krótka 2"
-            ),
-        ]
+        return []
+    }
+    
+    static func deleteHelpRequest() -> HelpRequest? {
+        // Todo: Actual API call
+        return nil
     }
 }

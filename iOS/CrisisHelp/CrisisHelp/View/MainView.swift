@@ -38,7 +38,7 @@ struct MainView: View {
                     }
                 }
                 .tag(1)
-            HelpView()
+            HelpSelectView()
             .tabItem {
                 VStack {
                     Image("barHelp")

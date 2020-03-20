@@ -13,10 +13,6 @@ import SwiftUI
 class HelpViewModel : ObservableObject {
     var didChange = PassthroughSubject<HelpViewModel, Never>()
     
-    var resourceAmounts : [String] {
-        return ResourceAmount.allValues.map{ $0.rawValue }
-    }
-    
     @Published var waterSelection : Int = 0
     @Published var foodSelection : Int = 0
     @Published var medsSelection : Int = 0
@@ -26,6 +22,29 @@ class HelpViewModel : ObservableObject {
     @Published var showRequestSheet = false
     @Published var showRequestSuccess = false
     @Published var showRequestFailure = false
+    
+    var resourceAmounts : [String] {
+        return ResourceAmount.allValues.map{ $0.rawValue }
+    }
+    var viewState : String = "Loading" {
+        didSet {
+            didChange.send(self)
+        }
+    }
+    var requestedHelp : HelpRequest? {
+        didSet {
+            didChange.send(self)
+        }
+    }
+    
+    init() {
+        if let helpRequest = DataServices.getUserHelpRequest() {
+            viewState = "HasRequest"
+            requestedHelp = helpRequest
+        } else {
+            viewState = "NoRequest"
+        }
+    }
     
     func sendHelpRequest(latitude: Double, longitude: Double) {
         guard latitude != 0 && longitude != 0 else {
@@ -45,8 +64,15 @@ class HelpViewModel : ObservableObject {
             description: description
         )
         
-        // TODO: Do actual request to server
-        
         showRequestSuccess = true
+    }
+    
+    func sendDeleteRequest() {
+        if let _ = DataServices.deleteHelpRequest() {
+            showRequestSuccess = true
+            requestedHelp = nil
+        } else {
+            showRequestFailure = true
+        }
     }
 }

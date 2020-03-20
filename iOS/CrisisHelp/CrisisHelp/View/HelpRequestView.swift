@@ -8,8 +8,8 @@
 
 import SwiftUI
 
-struct HelpView: View {
-    @ObservedObject private var model = HelpViewModel()
+struct HelpRequestView: View {
+    @ObservedObject var model : HelpViewModel
     @ObservedObject var locationViewModel = LocationViewModel()
     
     var body: some View {
@@ -110,6 +110,6 @@ struct HelpView: View {
 
 struct HelpView_Previews: PreviewProvider {
     static var previews: some View {
-        HelpView()
+        HelpRequestView(model: HelpViewModel())
     }
 }
