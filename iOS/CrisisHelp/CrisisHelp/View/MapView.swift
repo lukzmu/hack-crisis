@@ -26,6 +26,7 @@ struct MapView: UIViewRepresentable {
     
     func updateUIView(_ view: MKMapView, context: Context){
         guard let requests = helpRequests else { return }
+        view.removeAnnotations(view.annotations)
         for request in requests {
             let coords = CLLocationCoordinate2D(latitude: request.latitude, longitude: request.longitude)
             let annotation = MapAnnotation(coordinate: coords, helpRequest: request)
