@@ -50,7 +50,7 @@ struct HelpMapView: View {
                                     .frame(maxWidth: .infinity)
                                     .background(Color("greenLight"))
                                     .foregroundColor(Color("greenDark"))
-                                    .cornerRadius(10)
+                                    .cornerRadius(80)
                                     .padding([.leading, .trailing])
                             }
                         }

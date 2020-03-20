@@ -28,7 +28,7 @@ struct HackathonView: View {
                     Text("Project repository").padding()
                 }
                 Spacer()
-                Text("From Poland with ♥️.").padding()
+                Text("From Poland with 💚.").padding()
             }
         }
     }
