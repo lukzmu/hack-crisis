@@ -1,5 +1,6 @@
 import json
 import boto3
+from decimal import Decimal
 
 dynamodb = boto3.resource('dynamodb')
 table = dynamodb.Table('HelpRequest')
@@ -16,15 +17,21 @@ description = ''
 
 def lambda_handler(event, context):
     print(event)
-    deviceId  = event['queryStringParameters']['deviceId']
-    water = event['queryStringParameters']['water']
-    food = event['queryStringParameters']['food']
-    numberOfPeople = event['queryStringParameters']['numberOfPeople']
-    meds = event['queryStringParameters']['meds']
-    latitude = event['queryStringParameters']['latitude']
-    longitude = event['queryStringParameters']['longitude']
-    isConv = event['queryStringParameters']['isConv']
-    description = event['queryStringParameters']['description']
+    body = json.loads(event['body'], parse_float=Decimal)
+    
+    for key in body:
+        if body[key] == "":
+            body[key] = None
+    
+    deviceId  = body['deviceId']
+    water = body['water']
+    food = body['food']
+    numberOfPeople = body['numberOfPeople']
+    meds = body['meds']
+    latitude = body['latitude']
+    longitude = body['longitude']
+    isConv = body['isConv']
+    description = body['description']
 
     response = table.put_item(
         Item={
@@ -37,8 +44,29 @@ def lambda_handler(event, context):
             'longitude': longitude,
             'isConv': isConv,
             'description': description
-
-
-            
             }
     )
+    
+    response = table.get_item(
+        Key={
+            'deviceId': str(deviceId),
+        }
+    )
+    
+    if 'Item' in response:
+        return {
+            'statusCode': 200,
+            'body': json.dumps(response['Item'], default=handle_decimal_type),
+        }
+    return {
+        'statusCode': 404,
+        'body': '{"message": "HelpRequest not found."}'
+    }
+    
+def handle_decimal_type(obj):
+  if isinstance(obj, Decimal):
+      if float(obj).is_integer():
+         return int(obj)
+      else:
+         return float(obj)
+  raise TypeError
