@@ -26,7 +26,7 @@ class HelpViewModel : ObservableObject {
     var resourceAmounts : [String] {
         return ResourceAmount.allValues.map{ $0.rawValue }
     }
-    var viewState : String = "Loading" {
+    @Published var viewState : String = "Loading" {
         didSet {
             didChange.send(self)
         }
@@ -38,12 +38,14 @@ class HelpViewModel : ObservableObject {
     }
     
     init() {
-        if let helpRequest = DataServices.getUserHelpRequest() {
-            viewState = "HasRequest"
-            requestedHelp = helpRequest
-        } else {
-            viewState = "NoRequest"
-        }
+        DataServices.getUserHelpRequest(completion: { result in
+            if let helpRequest = result {
+                self.viewState = "HasRequest"
+                self.requestedHelp = helpRequest
+            } else {
+                self.viewState = "NoRequest"
+            }
+        })
     }
     
     func sendHelpRequest(latitude: Double, longitude: Double) {
@@ -65,6 +67,7 @@ class HelpViewModel : ObservableObject {
         )
         
         showRequestSuccess = true
+        viewState = "HasRequest"
     }
     
     func sendDeleteRequest() {
