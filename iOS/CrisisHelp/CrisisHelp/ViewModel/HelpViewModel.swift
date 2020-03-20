@@ -80,11 +80,16 @@ class HelpViewModel : ObservableObject {
     }
     
     func sendDeleteRequest() {
-        if let _ = DataServices.deleteHelpRequest() {
-            showRequestSuccess = true
-            requestedHelp = nil
-        } else {
-            showRequestFailure = true
-        }
+        viewState = "Request"
+         DataServices.deleteHelpRequest(completion: { result in
+            if result {
+                self.showRequestSuccess = true
+                self.requestedHelp = nil
+                self.viewState = "NoRequest"
+            } else {
+                self.showRequestFailure = true
+                self.viewState = "HasRequest"
+            }
+         })
     }
 }

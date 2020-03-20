@@ -101,8 +101,21 @@ struct DataServices {
         }
     }
     
-    static func deleteHelpRequest() -> HelpRequest? {
-        // Todo: Actual API call
-        return nil
+    static func deleteHelpRequest(completion: @escaping (Bool) -> Void) {
+        let deviceId = DeviceServices.getDeviceId()
+        AF.request(
+            ConnectionStrings.removeHelpRequestString,
+            method: .post,
+            parameters: ["deviceId": deviceId],
+            encoding: JSONEncoding.default
+        ).response { response in
+            if let status = response.response?.statusCode {
+                if status == 204 {
+                    completion(true)
+                    return
+                }
+            }
+            completion(false)
+        }
     }
 }

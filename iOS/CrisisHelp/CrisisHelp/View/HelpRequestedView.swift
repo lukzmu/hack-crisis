@@ -72,7 +72,7 @@ struct HelpRequestedView: View {
                             .font(.caption)
                             .padding()
                         Button(action: {
-                            self.model.sendDeleteRequest()
+                            self.model.showRequestSheet = true
                         }) {
                             Text("Delete")
                                 .fontWeight(.bold)
@@ -82,6 +82,18 @@ struct HelpRequestedView: View {
                                 .foregroundColor(Color("redDark"))
                                 .cornerRadius(80)
                                 .padding([.leading, .trailing, .bottom])
+                        }
+                        .actionSheet(isPresented: $model.showRequestSheet) {
+                            ActionSheet(
+                                title: Text("Send help request"),
+                                message: Text("Are you sure you want to send a help request?"),
+                                buttons: [
+                                    .destructive(Text("Yes")) {
+                                        self.model.sendDeleteRequest()
+                                    },
+                                    .default(Text("No"))
+                                ]
+                            )
                         }
                     }
                 }
