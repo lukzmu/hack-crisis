@@ -31,6 +31,7 @@ struct MapView: UIViewRepresentable {
             let annotation = MapAnnotation(coordinate: coords, helpRequest: request)
             view.addAnnotation(annotation)
         }
+        view.showAnnotations(view.annotations, animated: true)
     }
     
     func makeCoordinator() -> MapView.Coordinator {
