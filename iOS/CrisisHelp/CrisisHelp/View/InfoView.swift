@@ -11,11 +11,6 @@ import SwiftUI
 struct InfoView: View {
     @ObservedObject var model = InfoViewModel()
     
-    init() {
-        UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor(named: "greenDark")!]
-        UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor(named: "greenDark")!]
-    }
-    
     var body: some View {
         NavigationView {
             ScrollView {

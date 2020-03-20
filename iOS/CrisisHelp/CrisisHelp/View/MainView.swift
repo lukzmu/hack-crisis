@@ -10,13 +10,19 @@ import SwiftUI
 
 struct MainView: View {
     @State private var selection = 0
+    
+    init() {
+        UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor(named: "greenDark")!]
+        UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor(named: "greenDark")!]
+    }
  
     var body: some View {
         TabView(selection: $selection){
             InfoView()
             .tabItem {
                 VStack {
-                    Image(systemName: "info")
+                    Image("barInfo")
+                        .renderingMode(.template)
                     Text("Information")
                 }
             }
@@ -24,7 +30,8 @@ struct MainView: View {
             HelpMapView()
                 .tabItem {
                     VStack {
-                        Image(systemName: "map")
+                        Image("barMap")
+                            .renderingMode(.template)
                         Text("Map")
                     }
                 }
@@ -32,12 +39,14 @@ struct MainView: View {
             HelpView()
             .tabItem {
                 VStack {
-                    Image(systemName: "exclamationmark.bubble")
+                    Image("barHelp")
+                    .renderingMode(.template)
                     Text("Help")
                 }
             }
             .tag(2)
         }
+        .accentColor(Color("greenDark"))
     }
 }
 
