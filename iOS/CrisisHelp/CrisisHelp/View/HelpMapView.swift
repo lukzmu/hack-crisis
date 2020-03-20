@@ -10,10 +10,14 @@ import SwiftUI
 
 struct HelpMapView: View {
     @ObservedObject var model = HelpMapViewModel()
+    @ObservedObject var locationModel = LocationViewModel()
     
     var body: some View {
         ZStack {
-            MapView(model: model)
+            MapView(
+                model: model,
+                locationModel: locationModel
+            )
             if !model.showSelectedRequest {
                 VStack {
                     Spacer()
@@ -47,7 +51,10 @@ struct HelpMapView: View {
                                 .padding([.leading, .trailing, .bottom])
                                 .foregroundColor(Color("appColor"))
                             Button(action: {
-                                self.model.refreshData()
+                                self.model.refreshData(
+                                    latitude: self.locationModel.userLatitude,
+                                    longitude: self.locationModel.userLongitude
+                                )
                             }) {
                                 Text("Apply Changes")
                                     .fontWeight(.bold)

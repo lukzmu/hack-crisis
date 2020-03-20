@@ -28,10 +28,18 @@ class HelpMapViewModel : ObservableObject {
     }
     
     init() {
-        refreshData()
+        // Didn't have time during hackathon to fix no location on view start
+        refreshData(latitude: 0, longitude: 0)
     }
     
-    func refreshData() {
-        helpRequests = DataServices.getHelpRequests(inRadius: rangeSliderValue)
+    func refreshData(latitude: Double, longitude: Double) {
+        DataServices.getHelpRequests(
+            latitude: latitude,
+            longitude: longitude,
+            radius: rangeSliderValue,
+            completion: { result in
+                self.helpRequests = result
+            }
+        )
     }
 }

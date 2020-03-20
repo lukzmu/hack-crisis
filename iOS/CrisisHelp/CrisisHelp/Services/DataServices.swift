@@ -10,6 +10,7 @@ import Foundation
 import SwiftUI
 import SwiftyJSON
 import Alamofire
+import ObjectMapper
 
 struct DataServices {
     static func getInformationLinks() -> Dictionary<String, String> {
@@ -39,7 +40,6 @@ struct DataServices {
             if let status = response.response?.statusCode {
                 if status == 200 {
                     if let json = response.value {
-                        print(json)
                         completion(HelpRequest(JSONString: json))
                     }
                 }
@@ -48,9 +48,35 @@ struct DataServices {
         completion(nil)
     }
     
-    static func getHelpRequests(inRadius: Double) -> [HelpRequest] {
-        // Todo: Actual API call
-        return []
+    static func getHelpRequests(
+        latitude: Double?,
+        longitude: Double?,
+        radius: Double,
+        completion: @escaping ([HelpRequest]?) -> Void
+    ) {
+        let parameters = [
+            "userLat" : latitude,
+            "userLon" : longitude,
+            "radius" : radius
+        ]
+        
+        AF.request(
+            ConnectionStrings.getHelpRequestsString,
+            parameters: parameters
+        ).responseJSON { response in
+            if let data = response.data {
+                let json = JSON(data)
+                var helpRequests = [HelpRequest]()
+                for (_, jsonObject) in json {
+                    let jsonString = jsonObject.rawString()!
+                    if let helpRequest = HelpRequest(JSONString: jsonString) {
+                        helpRequests.append(helpRequest)
+                    }
+                }
+                completion(helpRequests)
+            }
+        }
+        completion(nil)
     }
     
     static func createHelpRequest(helpRequest: HelpRequest) -> [HelpRequest]? {
