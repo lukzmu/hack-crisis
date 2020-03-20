@@ -16,7 +16,8 @@ struct HelpMapView: View {
         ZStack {
             MapView(
                 model: model,
-                locationModel: locationModel
+                locationModel: locationModel,
+                helpRequests: model.helpRequests
             )
             if !model.showSelectedRequest {
                 VStack {

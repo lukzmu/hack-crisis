@@ -8,18 +8,14 @@
 
 import Foundation
 import Combine
+import MapKit
 
 class HelpMapViewModel : ObservableObject {
     var didChange = PassthroughSubject<HelpMapViewModel, Never>()
     
     @Published var rangeSliderValue : Double = 80
     @Published var showSelectedRequest : Bool = false
-    
-    var helpRequests : [HelpRequest]? {
-        didSet {
-            didChange.send(self)
-        }
-    }
+    @Published var helpRequests : [HelpRequest]? = [HelpRequest]()
     
     var selectedRequest : HelpRequest? {
         didSet {

@@ -10,8 +10,9 @@ import SwiftUI
 import MapKit
 
 struct MapView: UIViewRepresentable {
-    var model : HelpMapViewModel?
+    @ObservedObject var model : HelpMapViewModel
     var locationModel : LocationViewModel?
+    var helpRequests : [HelpRequest]?
     
     func makeUIView(context: Context) -> MKMapView {
         let map = MKMapView(frame: UIScreen.main.bounds)
@@ -24,7 +25,7 @@ struct MapView: UIViewRepresentable {
     }
     
     func updateUIView(_ view: MKMapView, context: Context){
-        guard let requests = model?.helpRequests else { return }
+        guard let requests = helpRequests else { return }
         for request in requests {
             let coords = CLLocationCoordinate2D(latitude: request.latitude, longitude: request.longitude)
             let annotation = MapAnnotation(coordinate: coords, helpRequest: request)
@@ -68,14 +69,14 @@ struct MapView: UIViewRepresentable {
             }
             let typedAnnotation = view.annotation as! MapAnnotation
             
-            parent.model?.selectedRequest = typedAnnotation.helpRequest
-            parent.model?.showSelectedRequest = true
+            parent.model.selectedRequest = typedAnnotation.helpRequest
+            parent.model.showSelectedRequest = true
         }
     }
 }
 
 struct MapView_Previews: PreviewProvider {
     static var previews: some View {
-        MapView()
+        MapView(model: HelpMapViewModel())
     }
 }
