@@ -53,6 +53,7 @@ class HelpViewModel : ObservableObject {
             showRequestFailure = true
             return
         }
+        viewState = "Request"
         
         let helpRequest = HelpRequest(
             deviceId: DeviceServices.getDeviceId(),
@@ -66,8 +67,16 @@ class HelpViewModel : ObservableObject {
             description: description
         )
         
-        showRequestSuccess = true
-        viewState = "HasRequest"
+        DataServices.createHelpRequest(helpRequest: helpRequest, completion: { result in
+            if let helpRequest = result {
+                self.showRequestSuccess = true
+                self.viewState = "HasRequest"
+                self.requestedHelp = helpRequest
+            } else {
+                self.showRequestFailure = true
+                self.viewState = "NoRequest"
+            }
+        })
     }
     
     func sendDeleteRequest() {

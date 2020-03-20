@@ -41,11 +41,12 @@ struct DataServices {
                 if status == 200 {
                     if let json = response.value {
                         completion(HelpRequest(JSONString: json))
+                        return
                     }
                 }
             }
+            completion(nil)
         }
-        completion(nil)
     }
     
     static func getHelpRequests(
@@ -74,14 +75,30 @@ struct DataServices {
                     }
                 }
                 completion(helpRequests)
+                return
             }
+            completion(nil)
         }
-        completion(nil)
     }
     
-    static func createHelpRequest(helpRequest: HelpRequest) -> [HelpRequest]? {
-        // Todo: Actual API call
-        return nil
+    static func createHelpRequest(helpRequest: HelpRequest, completion: @escaping (HelpRequest?) -> Void) {
+        let json = helpRequest.toJSON()
+        AF.request(
+            ConnectionStrings.createHelpRequestString,
+            method: .post,
+            parameters: json,
+            encoding: JSONEncoding.default
+        ).responseString { response in
+            if let status = response.response?.statusCode {
+                if status == 200 {
+                    if let json = response.value {
+                        completion(HelpRequest(JSONString: json))
+                        return
+                    }
+                }
+            }
+            completion(nil)
+        }
     }
     
     static func deleteHelpRequest() -> HelpRequest? {
