@@ -14,6 +14,8 @@ struct MainView: View {
     init() {
         UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor(named: "greenDark")!]
         UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor(named: "greenDark")!]
+        UITableView.appearance().backgroundColor = UIColor(named: "grayBackground")
+        UISwitch.appearance().onTintColor = UIColor(named: "medsColor") // For help request
     }
  
     var body: some View {

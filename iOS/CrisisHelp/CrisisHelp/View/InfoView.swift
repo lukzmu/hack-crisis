@@ -50,6 +50,7 @@ struct InfoView: View {
                                 self.model.navigateToWebsite(link: self.model.buttonData[key]!)
                             }) {
                                 Text(key)
+                                    .fontWeight(.bold)
                                     .padding()
                                     .frame(maxWidth: .infinity)
                                     .background(Color("greenLight"))

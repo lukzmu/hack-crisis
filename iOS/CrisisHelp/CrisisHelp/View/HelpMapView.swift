@@ -34,9 +34,13 @@ struct HelpMapView: View {
                                     .foregroundColor(.gray)
                                     .padding(.leading)
                                 Spacer()
-                                Text("\(model.rangeSliderValue.clean)km")
+                                HStack{
+                                    Text("\(model.rangeSliderValue.clean)")
                                     .fontWeight(.bold)
-                                    .padding(.trailing)
+                                    Text("km")
+                                    .fontWeight(.bold)
+                                }
+                                .padding(.trailing)
                             }
                             Slider(value: $model.rangeSliderValue, in: 10...100, step: 10)
                                 .accentColor(Color.green)
@@ -46,6 +50,7 @@ struct HelpMapView: View {
                                 self.model.refreshData()
                             }) {
                                 Text("Apply Changes")
+                                    .fontWeight(.bold)
                                     .padding()
                                     .frame(maxWidth: .infinity)
                                     .background(Color("greenLight"))

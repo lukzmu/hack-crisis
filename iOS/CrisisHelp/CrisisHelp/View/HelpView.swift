@@ -16,17 +16,29 @@ struct HelpView: View {
         NavigationView {
             Form {
                 Section(header: Text("Supplies")) {
-                    Picker(selection: $model.waterSelection, label: Text("Water"), content: {
+                    Picker(selection: $model.waterSelection, label: HStack{
+                        Image("pinWater")
+                        Text("Water")
+                        .foregroundColor(Color("waterColor"))
+                    }, content: {
                         ForEach(0..<model.resourceAmounts.count, id: \.self) {
                             Text(self.model.resourceAmounts[$0])
                         }
                     })
-                    Picker(selection: $model.foodSelection, label: Text("Food"), content: {
+                    Picker(selection: $model.foodSelection, label: HStack{
+                        Image("pinFood")
+                        Text("Food")
+                        .foregroundColor(Color("foodColor"))
+                    }, content: {
                         ForEach(0..<model.resourceAmounts.count, id: \.self) {
                             Text(self.model.resourceAmounts[$0])
                         }
                     })
-                    Picker(selection: $model.medsSelection, label: Text("Meds"), content: {
+                    Picker(selection: $model.medsSelection, label: HStack {
+                        Image("pinMeds")
+                        Text("Meds")
+                        .foregroundColor(Color("medsColor"))
+                    }, content: {
                         ForEach(0..<model.resourceAmounts.count, id: \.self) {
                             Text(self.model.resourceAmounts[$0])
                         }
@@ -36,10 +48,17 @@ struct HelpView: View {
                     Toggle(isOn: $model.isConv) {
                         Text("Are you infected?")
                     }
+                    .accentColor(Color("medsColor"))
                 }
                 Section(header: Text("Additional details")) {
                     Stepper(value: self.$model.numberOfPeople, in: 1...20, label: {
-                        Text("People at home: \(self.model.numberOfPeople)")
+                        HStack {
+                            Text("People at home")
+                            Spacer()
+                            Text("\(self.model.numberOfPeople)")
+                                .fontWeight(.bold)
+                                .padding(.trailing)
+                        }
                     })
                     TextField("Optional description of your problem", text: $model.description)
                 }
@@ -47,7 +66,9 @@ struct HelpView: View {
                     Button(action: {
                         self.model.showRequestSheet = true
                     }) {
-                        Text("SEND HELP REQUEST").foregroundColor(Color.red)
+                        Text("Send request")
+                            .fontWeight(.bold)
+                            .foregroundColor(Color("greenDark"))
                     }
                     .actionSheet(isPresented: $model.showRequestSheet) {
                         ActionSheet(
