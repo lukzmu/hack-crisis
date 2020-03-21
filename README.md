@@ -24,6 +24,10 @@
 - [Jacek Bazydlo](https://www.linkedin.com/in/jacekbazydlo/) - AWS Backend
 - [Karolina Sala](https://www.linkedin.com/in/karolina-sala/) - UX Design
 
+## Youtube project presentation
+
+[![](http://img.youtube.com/vi/APdHiiLn2qE/0.jpg)](http://www.youtube.com/watch?v=APdHiiLn2qE "")
+
 # Technical Details
 
 ## Help Request model
