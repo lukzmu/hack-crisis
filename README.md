@@ -16,8 +16,76 @@
 
 **Crisis Help** tackles the problem of isolation - government is asking people to stay home, but the resources we keep in our households aren't limitless. The application allows you to share information that you are missing specific kind of mandatory products in your household and share this information with government specified institutions (for MVP purposes, this is an open list, so that anyone can help).
 
+**Hackathon category:** Isolation
+
 ## Meet the team
 
 - [Lukasz Zmudzinski](https://zmudzinski.me) - Team Leader, AWS Backend, iOS app
 - [Jacek Bazydlo](https://www.linkedin.com/in/jacekbazydlo/) - AWS Backend
 - [Karolina Sala](https://www.linkedin.com/in/karolina-sala/) - UX Design
+
+# Technical Details
+
+## Help Request model
+
+This is the core model of our application. It describes a user help request that can be seen by others to provide supplies.
+
+| **Field** | **Type** | **Required** | **Description** |
+| :-- | :-- | :-- | :-- |
+| `deviceId` | `String` | Yes | The unique mobile device identifier |
+| `water` | `String : [Normal, Bad, Critical]` | Yes | What is the user status of water supplies |
+| `food` | `String : [Normal, Bad, Critical]` | Yes | What is the user status of food supplies |
+| `meds` | `String : [Normal, Bad, Critical]` | Yes | What is the user status of meds supplies |
+| `isConv` | `Bool` | Yes | Is the user diagnosed with Coronavirus |
+| `latitude` | `Double` | Yes | User latitude geolocation |
+| `longitude` | `Double` | Yes | User longitude geolocation |
+| `description` | `String` | No | Additional description,  if the user has something to add |
+
+## Backend documentation
+
+![System structure](/Docs/system_structure.png)
+
+We decided to use cloud services to increase the scalability of our application. Backend services are contacted through HTTP requests from the mobile application. The requests lands in the API Gateaway and is directed to the requested Lambda function (`Python3.7`). The function processes the request and makes changes in the NoSQL DynamoDB table containing all HelpRequests.
+
+### Lambda endpoint details
+
+| **Lambda function** | **Type** | **Parameters** | **Description** | **Code** |
+| :-- | :-- | :-- | :-- | :-- |
+| `newHelpRequest` | POST | `HelpRequest` | Creates a new HelpRequest | [Link](https://gitlab.com/lukzmu/hackcrisis2020/-/blob/master/Backend/newHelpRequest.py) |
+| `deleteHelpRequest` | POST | `deviceId` | Removes user HelpRequest | [Link](https://gitlab.com/lukzmu/hackcrisis2020/-/blob/master/Backend/deleteHelpRequest.py) |
+| `getHelpRequest` | GET | `deviceId` | Gets user help request | [Link](https://gitlab.com/lukzmu/hackcrisis2020/-/blob/master/Backend/getHelpRequest.py) |
+| `getAllHelpRequests` | GET | `[latitude, longitude, radius]` | Gets help requests at `radius` to user location | [Link](https://gitlab.com/lukzmu/hackcrisis2020/-/blob/master/Backend/getAllHelpRequests.py) |
+
+### AWS endpoint urls
+
+- `https://wxzk3i9otl.execute-api.eu-west-1.amazonaws.com/default/newHelpRequest`
+- `https://p8unq6l7bh.execute-api.eu-west-1.amazonaws.com/default/deleteHelpRequest`
+- `https://myqof4xeba.execute-api.eu-west-1.amazonaws.com/getHelpRequest`
+- `https://ctiif1xdn9.execute-api.eu-west-1.amazonaws.com/default/getAllHelpRequests`
+
+## iOS documentation
+
+- Built using Swift programming language,
+- Views are built using SwiftUI,
+- No unit/interface testing was performed due to limited hackathon time,
+- Code can be previewed in the [iOS directory](https://gitlab.com/lukzmu/hackcrisis2020/-/tree/master/iOS).
+
+### Dependencies
+Dependencies are managed by the Swift Package Manager (SPM).
+
+| **Dependency** | **Version** | **Description** | **Dependency Page** |
+| :-- | :-- | :-- | :-- |
+| Alamofire | `5.0.4` | Handling external API requests | [Link](https://github.com/Alamofire/Alamofire) |
+| SwiftyJSON | `5.0.0` | Processing JSON file format | [Link](https://github.com/SwiftyJSON/SwiftyJSON) |
+| ObjectMapper | `3.5.2` | Mapping JSON to HelpRequest objects | [Link](https://github.com/tristanhimmelman/ObjectMapper) |
+
+### App structure
+The application implements the MVVM architecture pattern.
+
+| **Directory** | **Description** |
+| :-- | :-- |
+| `Model` | Holds classes responsible for storing the data model information |
+| `View` | Contains SwiftUI view building blocks |
+| `ViewModel` | Contains classes responsible for View-Model communication |
+| `Services` | Contains device and backend communication classes |
+| `Extensions` | Contains class extensions making life easier |
