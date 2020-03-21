@@ -2,7 +2,7 @@
 
 ![Platforms](https://img.shields.io/badge/platforms-iOS-lightgrey)
 ![License](https://img.shields.io/badge/license-MIT-green)
-[![Hackathon](https://img.shields.io/badge/hackathon-Hack_Crisis-red)](https://www.hackcrisis.com/)
+![Hackathon](https://img.shields.io/badge/hackathon-Hack_Crisis-red)
 
 # Overview
 
