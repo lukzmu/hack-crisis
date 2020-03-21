@@ -96,21 +96,21 @@ All system UX design files can be previewed in the [Design directory](https://gi
 
 ## Resource color schema
 
-| **Resource** | **Color Hex** |
+| **Color Hex** | **Resource** | 
 | :-- | :-- |
-| Food | `#3E4A59` |
-| Water | `#0090D8` |
-| Meds | `#F74165` |
+| `#3E4A59` | Food | 
+| `#0090D8` | Water | 
+| `#F74165` | Meds | 
 
 ## Application color schema
 
-| **Color Name** | **Color Hex** |
+| **Color Hex** | **Color Name** | 
 | :-- | :-- |
-| Background | `#F9FBFD` |
-| Accent | `#47C68F` |
-| Accept Button Background | `#E3F7EE` |
-| Destructive Accent | `#F74165` |
-| Destructive Button Background | `#F8E7EB` |
+| `#F9FBFD` | Background |
+| `#47C68F` | Accent | 
+| `#E3F7EE` | Accept Button Background | 
+| `#F74165` | Destructive Accent | 
+| `#F8E7EB` | Destructive Button Background | 
 
 ## Map icon guideline
 
