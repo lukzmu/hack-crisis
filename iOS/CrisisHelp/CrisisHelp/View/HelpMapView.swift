@@ -11,6 +11,7 @@ import SwiftUI
 struct HelpMapView: View {
     @ObservedObject var model = HelpMapViewModel()
     @ObservedObject var locationModel = LocationViewModel()
+    @Environment(\.colorScheme) var mode
     
     var body: some View {
         ZStack {
@@ -24,7 +25,7 @@ struct HelpMapView: View {
                     Spacer()
                     ZStack {
                         RoundedRectangle(cornerRadius: 10)
-                            .foregroundColor(Color.white)
+                            .foregroundColor(mode == .dark ? Color.black : Color.white)
                             .frame(height: 200)
                             .padding([.leading, .trailing])
                         VStack {
