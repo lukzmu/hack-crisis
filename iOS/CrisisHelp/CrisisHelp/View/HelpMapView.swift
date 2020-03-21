@@ -19,7 +19,12 @@ struct HelpMapView: View {
                 model: model,
                 locationModel: locationModel,
                 helpRequests: model.helpRequests
-            )
+            ).onAppear {
+                self.model.refreshData(
+                    latitude: self.locationModel.userLatitude,
+                    longitude: self.locationModel.userLongitude
+                )
+            }
             if !model.showSelectedRequest {
                 VStack {
                     Spacer()
