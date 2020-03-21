@@ -54,7 +54,7 @@ We decided to use cloud services to increase the scalability of our application.
 | `newHelpRequest` | POST | `HelpRequest` | Creates a new HelpRequest | [Link](https://gitlab.com/lukzmu/hackcrisis2020/-/blob/master/Backend/newHelpRequest.py) |
 | `deleteHelpRequest` | POST | `deviceId` | Removes user HelpRequest | [Link](https://gitlab.com/lukzmu/hackcrisis2020/-/blob/master/Backend/deleteHelpRequest.py) |
 | `getHelpRequest` | GET | `deviceId` | Gets user help request | [Link](https://gitlab.com/lukzmu/hackcrisis2020/-/blob/master/Backend/getHelpRequest.py) |
-| `getAllHelpRequests` | GET | `[latitude, longitude, radius]` | Gets help requests at `radius` to user location | [Link](https://gitlab.com/lukzmu/hackcrisis2020/-/blob/master/Backend/getAllHelpRequests.py) |
+| `getAllHelpRequests` | GET | `latitude, longitude, radius` | Gets help requests at `radius` to user location | [Link](https://gitlab.com/lukzmu/hackcrisis2020/-/blob/master/Backend/getAllHelpRequests.py) |
 
 ### AWS endpoint urls
 
@@ -89,3 +89,25 @@ The application implements the MVVM architecture pattern.
 | `ViewModel` | Contains classes responsible for View-Model communication |
 | `Services` | Contains device and backend communication classes |
 | `Extensions` | Contains class extensions making life easier |
+
+# Design guidelines
+
+All system UX design files can be previewed in the [Design directory](https://gitlab.com/lukzmu/hackcrisis2020/-/tree/master/Design).
+
+## Resource color schema
+
+| **Resource** | **Preview** | **Color Hex** |
+| :-- | :-- | :-- |
+| Food | ![#3E4A59](https://placehold.it/10/3E4A59/000000?text=+) | `#3E4A59` |
+| Water | ![#0090D8](https://placehold.it/10/0090D8/000000?text=+) | `#0090D8` |
+| Meds | ![#F74165](https://placehold.it/10/F74165/000000?text=+) | `#F74165` |
+
+## Application color schema
+
+| **Color Name** | **Preview** | **Color Hex** |
+| :-- | :-- | :-- |
+| Background | ![#F9FBFD](https://placehold.it/10/F9FBFD/000000?text=+) | `#F9FBFD` |
+| Accent | ![#47C68F](https://placehold.it/10/47C68F/000000?text=+) | `#47C68F` |
+| Accept Button Background | ![#E3F7EE](https://placehold.it/10/E3F7EE/000000?text=+) | `#E3F7EE` |
+| Destructive Accent | ![#F74165](https://placehold.it/10/F74165/000000?text=+) | `#F74165` |
+| Destructive Button Background | ![#F8E7EB](https://placehold.it/10/F8E7EB/000000?text=+) | `#F8E7EB` |
