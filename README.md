@@ -104,10 +104,22 @@ All system UX design files can be previewed in the [Design directory](https://gi
 
 ## Application color schema
 
-| **Color Name** | **Preview** | **Color Hex** |
-| :-- | :-- | :-- |
+| **Color Name** | **Color Hex** |
+| :-- | :-- |
 | Background | `#F9FBFD` |
 | Accent | `#47C68F` |
 | Accept Button Background | `#E3F7EE` |
 | Destructive Accent | `#F74165` |
 | Destructive Button Background | `#F8E7EB` |
+
+## Map icon guideline
+
+| **Icon** | **Meaning** |
+| :-- | :-- |
+| ![Water](https://gitlab.com/lukzmu/hackcrisis2020/-/raw/master/iOS/CrisisHelp/CrisisHelp/Assets.xcassets/pinWater.imageset/pinWater_1x.png) | Prioritize water for this user |
+| ![Food](https://gitlab.com/lukzmu/hackcrisis2020/-/raw/master/iOS/CrisisHelp/CrisisHelp/Assets.xcassets/pinFood.imageset/pinFood_1x.png) | Prioritize food for this user |
+| ![Meds](https://gitlab.com/lukzmu/hackcrisis2020/-/raw/master/iOS/CrisisHelp/CrisisHelp/Assets.xcassets/pinMeds.imageset/pinMeds_1x.png) | Prioritize meds for this user |
+| ![Water and food](https://gitlab.com/lukzmu/hackcrisis2020/-/raw/master/iOS/CrisisHelp/CrisisHelp/Assets.xcassets/pinWaterFood.imageset/pinWaterFood_1x.png) | Prioritize food and water for this user |
+| ![Food and meds](https://gitlab.com/lukzmu/hackcrisis2020/-/raw/master/iOS/CrisisHelp/CrisisHelp/Assets.xcassets/pinFoodMeds.imageset/pinFoodMeds_1x.png) | Prioritize food and meds for this user |
+| ![Meds and water](https://gitlab.com/lukzmu/hackcrisis2020/-/raw/master/iOS/CrisisHelp/CrisisHelp/Assets.xcassets/pinWaterMeds.imageset/pinWaterMeds_1x.png) | Prioritize water and meds for this user |
+| ![Needs all](https://gitlab.com/lukzmu/hackcrisis2020/-/raw/master/iOS/CrisisHelp/CrisisHelp/Assets.xcassets/pinAll.imageset/pinAll_1x.png) | This user needs all resources |
