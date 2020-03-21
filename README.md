@@ -6,7 +6,9 @@
 
 # Overview
 
-<img src="Docs/information_page.gif" style="width: 280px"/> <img src="Docs/send_help_request.gif" style="width: 280px"/> <img src="Docs/filter_requests.gif" style="width: 280px"/>
+![Information Page](/Docs/information_page.gif)
+![Information Page](/Docs/send_help_request.gif)
+![Information Page](/Docs/filter_requests.gif)
 
 ## About the application
 
