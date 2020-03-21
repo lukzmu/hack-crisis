@@ -96,18 +96,18 @@ All system UX design files can be previewed in the [Design directory](https://gi
 
 ## Resource color schema
 
-| **Resource** | **Preview** | **Color Hex** |
-| :-- | :-- | :-- |
-| Food | ![#3E4A59](https://placehold.it/10/3E4A59/000000?text=+) | `#3E4A59` |
-| Water | ![#0090D8](https://placehold.it/10/0090D8/000000?text=+) | `#0090D8` |
-| Meds | ![#F74165](https://placehold.it/10/F74165/000000?text=+) | `#F74165` |
+| **Resource** | **Color Hex** |
+| :-- | :-- |
+| Food | `#3E4A59` |
+| Water | `#0090D8` |
+| Meds | `#F74165` |
 
 ## Application color schema
 
 | **Color Name** | **Preview** | **Color Hex** |
 | :-- | :-- | :-- |
-| Background | ![#F9FBFD](https://placehold.it/10/F9FBFD/000000?text=+) | `#F9FBFD` |
-| Accent | ![#47C68F](https://placehold.it/10/47C68F/000000?text=+) | `#47C68F` |
-| Accept Button Background | ![#E3F7EE](https://placehold.it/10/E3F7EE/000000?text=+) | `#E3F7EE` |
-| Destructive Accent | ![#F74165](https://placehold.it/10/F74165/000000?text=+) | `#F74165` |
-| Destructive Button Background | ![#F8E7EB](https://placehold.it/10/F8E7EB/000000?text=+) | `#F8E7EB` |
+| Background | `#F9FBFD` |
+| Accent | `#47C68F` |
+| Accept Button Background | `#E3F7EE` |
+| Destructive Accent | `#F74165` |
+| Destructive Button Background | `#F8E7EB` |
