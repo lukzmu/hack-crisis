@@ -1,16 +1,21 @@
-# Crisis Help
+![Crisis Help](/Docs/baner.png)
 
-`Crisis Help` is an application designed for the [Hack the Crisis: Tech for Good Hackathon](https://www.hackcrisis.com/) hosted online by [DO OK](dook.pro) with partnership from Govtech Poland, AWS, Google, Guaana and ProIdea. The code will be Open Source under the MIT license, so if you have any idea how to improve it and help more people, just do it.
+![Platforms](https://img.shields.io/badge/platforms-iOS-lightgrey)
+![License](https://img.shields.io/badge/license-MIT-green)
+[![Hackathon](https://img.shields.io/badge/hackathon-Hack_Crisis-red)](https://www.hackcrisis.com/)
 
-## Crisis Help
+# Overview
 
-`Crisis Help` tackles the problem of isolation - government is asking people to stay home, but the resources we keep in our households aren't limitless. The application allows you to share information that you are missing specific kind of mandatory products in your household and share this information with government specified institutions (for MVP purposes, this is an open list, so that anyone can help).
+<img src="Docs/information_page.gif" style="width: 280px"/> <img src="Docs/send_help_request.gif" style="width: 280px"/> <img src="Docs/filter_requests.gif" style="width: 280px"/>
 
-**The application consists of two projects:**
+## About the application
 
-- Backend application written in Django,
-- iOS application written in Swift.
+**Crisis Help** is an application designed for the [Hack the Crisis: Tech for Good Hackathon](https://www.hackcrisis.com/) hosted online by [DO OK](dook.pro) with partnership from Govtech Poland, AWS, Google, Guaana and ProIdea. The code will be Open Source under the MIT license, so if you have any idea how to improve it and help more people, just do it.
 
-## Contributors
+**Crisis Help** tackles the problem of isolation - government is asking people to stay home, but the resources we keep in our households aren't limitless. The application allows you to share information that you are missing specific kind of mandatory products in your household and share this information with government specified institutions (for MVP purposes, this is an open list, so that anyone can help).
 
-- [Lukasz Zmudzinski](https://zmudzinski.me)
+## Meet the team
+
+- [Lukasz Zmudzinski](https://zmudzinski.me) - Team Leader, AWS Backend, iOS app
+- [Jacek Bazydlo](https://www.linkedin.com/in/jacekbazydlo/) - AWS Backend
+- [Karolina Sala](https://www.linkedin.com/in/karolina-sala/) - UX Design
