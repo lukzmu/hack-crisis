@@ -120,10 +120,10 @@ All system UX design files can be previewed in the [Design directory](https://gi
 
 | **Icon** | **Meaning** |
 | :-- | :-- |
-| ![Water](https://github.com/lukzmu/hackcrisis2020/tree/master/iOS/CrisisHelp/CrisisHelp/Assets.xcassets/pinWater.imageset/pinWater_1x.png) | Prioritize water for this user |
-| ![Food](https://github.com/lukzmu/hackcrisis2020/tree/master/iOS/CrisisHelp/CrisisHelp/Assets.xcassets/pinFood.imageset/pinFood_1x.png) | Prioritize food for this user |
-| ![Meds](https://github.com/lukzmu/hackcrisis2020/tree/master/iOS/CrisisHelp/CrisisHelp/Assets.xcassets/pinMeds.imageset/pinMeds_1x.png) | Prioritize meds for this user |
-| ![Water and food](https://github.com/lukzmu/hackcrisis2020/tree/master/iOS/CrisisHelp/CrisisHelp/Assets.xcassets/pinWaterFood.imageset/pinWaterFood_1x.png) | Prioritize food and water for this user |
-| ![Food and meds](https://github.com/lukzmu/hackcrisis2020/tree/master/iOS/CrisisHelp/CrisisHelp/Assets.xcassets/pinFoodMeds.imageset/pinFoodMeds_1x.png) | Prioritize food and meds for this user |
-| ![Meds and water](https://github.com/lukzmu/hackcrisis2020/tree/master/iOS/CrisisHelp/CrisisHelp/Assets.xcassets/pinWaterMeds.imageset/pinWaterMeds_1x.png) | Prioritize water and meds for this user |
-| ![Needs all](https://github.com/lukzmu/hackcrisis2020/tree/master/iOS/CrisisHelp/CrisisHelp/Assets.xcassets/pinAll.imageset/pinAll_1x.png) | This user needs all resources |
+| ![Water](https://raw.githubusercontent.com/lukzmu/hackcrisis2020/master/iOS/CrisisHelp/CrisisHelp/Assets.xcassets/pinWater.imageset/pinWater_1x.png) | Prioritize water for this user |
+| ![Food](https://raw.githubusercontent.com/lukzmu/hackcrisis2020/master/iOS/CrisisHelp/CrisisHelp/Assets.xcassets/pinFood.imageset/pinFood_1x.png) | Prioritize food for this user |
+| ![Meds](https://raw.githubusercontent.com/lukzmu/hackcrisis2020/master/iOS/CrisisHelp/CrisisHelp/Assets.xcassets/pinMeds.imageset/pinMeds_1x.png) | Prioritize meds for this user |
+| ![Water and food](https://raw.githubusercontent.com/lukzmu/hackcrisis2020/master/iOS/CrisisHelp/CrisisHelp/Assets.xcassets/pinWaterFood.imageset/pinWaterFood_1x.png) | Prioritize food and water for this user |
+| ![Food and meds](https://raw.githubusercontent.com/lukzmu/hackcrisis2020/master/iOS/CrisisHelp/CrisisHelp/Assets.xcassets/pinFoodMeds.imageset/pinFoodMeds_1x.png) | Prioritize food and meds for this user |
+| ![Meds and water](https://raw.githubusercontent.com/lukzmu/hackcrisis2020/master/iOS/CrisisHelp/CrisisHelp/Assets.xcassets/pinWaterMeds.imageset/pinWaterMeds_1x.png) | Prioritize water and meds for this user |
+| ![Needs all](https://raw.githubusercontent.com/lukzmu/hackcrisis2020/master/iOS/CrisisHelp/CrisisHelp/Assets.xcassets/pinAll.imageset/pinAll_1x.png) | This user needs all resources |
