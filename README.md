@@ -53,10 +53,10 @@ We decided to use cloud services to increase the scalability of our application.
 
 | **Lambda function** | **Type** | **Parameters** | **Description** | **Code** |
 | :-- | :-- | :-- | :-- | :-- |
-| `newHelpRequest` | POST | `HelpRequest` | Creates a new HelpRequest | [Link](https://github.com/lukzmu/hackcrisis2020/blob/master/Backend/newHelpRequest.py) |
-| `deleteHelpRequest` | POST | `deviceId` | Removes user HelpRequest | [Link](https://github.com/lukzmu/hackcrisis2020/blob/master/Backend/deleteHelpRequest.py) |
-| `getHelpRequest` | GET | `deviceId` | Gets user help request | [Link](https://github.com/lukzmu/hackcrisis2020/blob/master/Backend/getHelpRequest.py) |
-| `getAllHelpRequests` | GET | `latitude, longitude, radius` | Gets help requests at `radius` to user location | [Link](https://github.com/lukzmu/hackcrisis2020/blob/master/Backend/getAllHelpRequests.py) |
+| `newHelpRequest` | POST | `HelpRequest` | Creates a new HelpRequest | [Link](/Backend/newHelpRequest.py) |
+| `deleteHelpRequest` | POST | `deviceId` | Removes user HelpRequest | [Link](/Backend/deleteHelpRequest.py) |
+| `getHelpRequest` | GET | `deviceId` | Gets user help request | [Link](/Backend/getHelpRequest.py) |
+| `getAllHelpRequests` | GET | `latitude, longitude, radius` | Gets help requests at `radius` to user location | [Link](/Backend/getAllHelpRequests.py) |
 
 ### AWS endpoint urls
 
@@ -70,7 +70,7 @@ We decided to use cloud services to increase the scalability of our application.
 - Built using Swift programming language,
 - Views are built using SwiftUI,
 - No unit/interface testing was performed due to limited hackathon time,
-- Code can be previewed in the [iOS directory](https://github.com/lukzmu/hackcrisis2020/tree/master/iOS).
+- Code can be previewed in the [iOS directory](/iOS).
 
 ### Dependencies
 Dependencies are managed by the Swift Package Manager (SPM).
@@ -94,7 +94,7 @@ The application implements the MVVM architecture pattern.
 
 # Design guidelines
 
-All system UX design files can be previewed in the [Design directory](https://github.com/lukzmu/hackcrisis2020/tree/master/Design).
+All system UX design files can be previewed in the [Design directory](/Design).
 
 ## Resource color schema
 
@@ -118,10 +118,10 @@ All system UX design files can be previewed in the [Design directory](https://gi
 
 | **Icon** | **Meaning** |
 | :-- | :-- |
-| ![Water](https://raw.githubusercontent.com/lukzmu/hackcrisis2020/master/iOS/CrisisHelp/CrisisHelp/Assets.xcassets/pinWater.imageset/pinWater_1x.png) | Prioritize water for this user |
-| ![Food](https://raw.githubusercontent.com/lukzmu/hackcrisis2020/master/iOS/CrisisHelp/CrisisHelp/Assets.xcassets/pinFood.imageset/pinFood_1x.png) | Prioritize food for this user |
-| ![Meds](https://raw.githubusercontent.com/lukzmu/hackcrisis2020/master/iOS/CrisisHelp/CrisisHelp/Assets.xcassets/pinMeds.imageset/pinMeds_1x.png) | Prioritize meds for this user |
-| ![Water and food](https://raw.githubusercontent.com/lukzmu/hackcrisis2020/master/iOS/CrisisHelp/CrisisHelp/Assets.xcassets/pinWaterFood.imageset/pinWaterFood_1x.png) | Prioritize food and water for this user |
-| ![Food and meds](https://raw.githubusercontent.com/lukzmu/hackcrisis2020/master/iOS/CrisisHelp/CrisisHelp/Assets.xcassets/pinFoodMeds.imageset/pinFoodMeds_1x.png) | Prioritize food and meds for this user |
-| ![Meds and water](https://raw.githubusercontent.com/lukzmu/hackcrisis2020/master/iOS/CrisisHelp/CrisisHelp/Assets.xcassets/pinWaterMeds.imageset/pinWaterMeds_1x.png) | Prioritize water and meds for this user |
-| ![Needs all](https://raw.githubusercontent.com/lukzmu/hackcrisis2020/master/iOS/CrisisHelp/CrisisHelp/Assets.xcassets/pinAll.imageset/pinAll_1x.png) | This user needs all resources |
+| ![Water](https://gitlab.com/lukzmu/hackcrisis2020/-/raw/master/iOS/CrisisHelp/CrisisHelp/Assets.xcassets/pinWater.imageset/pinWater_1x.png) | Prioritize water for this user |
+| ![Food](https://gitlab.com/lukzmu/hackcrisis2020/-/raw/master/iOS/CrisisHelp/CrisisHelp/Assets.xcassets/pinFood.imageset/pinFood_1x.png) | Prioritize food for this user |
+| ![Meds](https://gitlab.com/lukzmu/hackcrisis2020/-/raw/master/iOS/CrisisHelp/CrisisHelp/Assets.xcassets/pinMeds.imageset/pinMeds_1x.png) | Prioritize meds for this user |
+| ![Water and food](https://gitlab.com/lukzmu/hackcrisis2020/-/raw/master/iOS/CrisisHelp/CrisisHelp/Assets.xcassets/pinWaterFood.imageset/pinWaterFood_1x.png) | Prioritize food and water for this user |
+| ![Food and meds](https://gitlab.com/lukzmu/hackcrisis2020/-/raw/master/iOS/CrisisHelp/CrisisHelp/Assets.xcassets/pinFoodMeds.imageset/pinFoodMeds_1x.png) | Prioritize food and meds for this user |
+| ![Meds and water](https://gitlab.com/lukzmu/hackcrisis2020/-/raw/master/iOS/CrisisHelp/CrisisHelp/Assets.xcassets/pinWaterMeds.imageset/pinWaterMeds_1x.png) | Prioritize water and meds for this user |
+| ![Needs all](https://gitlab.com/lukzmu/hackcrisis2020/-/raw/master/iOS/CrisisHelp/CrisisHelp/Assets.xcassets/pinAll.imageset/pinAll_1x.png) | This user needs all resources |
